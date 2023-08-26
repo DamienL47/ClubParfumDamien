@@ -1,0 +1,212 @@
+@font-face {
+    font-family: "Monserrat";
+    src: url("../font/Montserrat.ttf");
+}
+@font-face {
+    font-family: "Mistress";
+    src: url("../font/MistressBenedictBrush-Regular.ttf");
+}
+@keyframes loader {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+        display: flex;
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50%);
+        display: none;
+    }
+}
+@keyframes maskBoby {
+    0% {
+        visibility: hidden;
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 768px;
+}
+@media screen and (max-width: 768px)  {
+    .anim {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0;
+        position: absolute;
+        top: 25%;
+        left: 5%;
+        animation: loader 6s ease forwards; 
+        transform: translate(-25%, -25%);
+    }
+    .present {
+        font-family: "Mistress";
+        font-size: 40px;
+    }
+    .bienvenue {
+        font-size: 60px;
+    }
+    .logo {
+        width: 350px;  
+    }
+
+    .postLoader {
+        position: absolute;
+        top: 0;
+        transform: translateY(-0%);
+        animation: maskBoby 7s 2.5s forwards;
+        visibility: hidden;
+        z-index: -1;
+    }
+    #head {
+        background-color: #EAC7FD;  
+        text-align: center;
+        padding: 50px 0 50px 0;
+    }
+    .profilPic {
+        width: 100px;
+        border-radius: 50%;
+        border: 10px solid white;
+        object-fit: cover;
+    }
+    .title1 {
+        font-family: "Monserrat";
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+    .jobDescribe {
+        font-family: "Monserrat";
+        font-weight: 300;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    .blocIcon {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+    }
+    .item {
+        margin-top: 20px;
+        color: white;
+        font-size: 30px;
+        border: 25px solid #D357F5;
+        background-color: #D357F5;
+        border-radius: 5px;
+    }
+    .fa-location-dot {
+        border-left: 30px solid #D357F5;
+        border-right: 30px solid #D357F5;
+    }
+
+    .text1, .text2 {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        margin-top: 20px;
+        font-family: "Montserrat";
+        font-size: 14px;
+    }
+    .text2 {
+        margin-top: 10px;
+        border-bottom: 2px solid #EAC7FD;
+        padding-bottom: 30px;
+    }
+    .fa-mobile-screen-button {
+        font-size: 30px;
+    }
+    .infoContact {
+        display: flex; 
+        margin-top: 20px;  
+        width: 100%;
+    }
+    .infoContact div {
+        width: 100%;
+    }
+    .infoContact:hover {
+        width: 100%;
+        background-color: #EAC7FD;
+    }
+    .linkSocial {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+        margin-left: 20px;
+    }
+    .logoSocial {
+        font-size: 30px;
+        margin-right: 10px;
+        color: white;
+        border: 10px solid #D357F5;
+        background-color: #D357F5;
+        border-radius: 50%;
+    }
+    .logoSocial:hover {
+        color: #D357F5;
+        border: 10px solid white;
+        background-color: white;
+    }
+    .info {
+        display: block;
+        margin-left: 20px;
+        font-family: "Monserrat";
+        font-weight: 300;
+        font-size: 14px;
+    }
+    .info > h3 {
+        margin-bottom: 0;
+    }
+    .info > p {
+        margin-top: 5px;
+    }
+    .addContact {
+        position: absolute;
+        top: 100px;
+        right: 50px;
+        border: 10px solid #D357F5;
+        background-color: #D357F5;
+        border-radius: 50%;
+        color: white;
+        font-size: 30px;
+    }
+    .addContact:hover {
+        border: 10px solid white;
+        background-color: white;
+        color: #D357F5;
+    }
+    .footer {
+        display: flex;
+        background-color: #EAC7FD;
+        padding: 50px 0 50px 0;
+        align-items: center;
+        justify-content: center;
+        border-top: 2px solid #D357F5;
+    }
+    .footer > a {
+        text-decoration: none;
+        color: black;
+        margin: 0 10px 0 5px;
+        font-size: 10px;
+    }
+    .footer > a:hover {
+        color: #D357F5;
+    }
+    .footer > p {
+        font-size: 10px;
+    }
+}
